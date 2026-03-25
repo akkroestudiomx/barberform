@@ -1,26 +1,3 @@
-const form = document.getElementById("formCita");
-const horaSelect = document.getElementById("hora");
-const btn = document.getElementById("btn");
-
-/* GENERAR HORARIOS */
-function generarHoras() {
-  const inicio = 10;
-  const fin = 20;
-
-  for (let h = inicio; h < fin; h++) {
-    ["00", "30"].forEach(min => {
-      const hora = `${String(h).padStart(2, "0")}:${min}`;
-      const option = document.createElement("option");
-      option.value = hora;
-      option.textContent = hora;
-      horaSelect.appendChild(option);
-    });
-  }
-}
-
-generarHoras();
-
-/* SUBMIT */
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -35,7 +12,10 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify(data),
     });
 
-    const result = await res.json();
+    const text = await res.text();
+    console.log("RESPUESTA:", text); // 👈 IMPORTANTE
+
+    const result = JSON.parse(text);
 
     if (result.status === "error") {
       alert(result.message);
@@ -44,12 +24,11 @@ form.addEventListener("submit", async (e) => {
       return;
     }
 
-    // REDIRECCIÓN A IMAGEN
     window.location.href = "https://i.postimg.cc/255Sv672/Agendado-Jrs-Barber.png";
 
   } catch (error) {
-    console.error(error);
-    alert("Error al agendar");
+    console.error("ERROR COMPLETO:", error);
+    alert("Revisa consola (F12)");
     btn.innerText = "Agendar mi cita";
     btn.disabled = false;
   }
