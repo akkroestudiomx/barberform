@@ -30,7 +30,7 @@ form.addEventListener("submit", async (e) => {
   btn.disabled = true;
 
   try {
-    const res = await fetch("https://script.google.com/macros/s/AKfycbzD8Qn9rgzGJQudzoGT9H_ukAays6xG72y7RwwDngXgLAwd3tBv7HgTkNHD34MqZoqk/exec", {
+    const res = await fetch("https://script.google.com/macros/s/AKfycbzq1QuLxiFeatas8f-03E9wcysjbb6waIrHZxcBaWtO2gvmtseGeDuaJg8g7DuazLKc/exec", {
       method: "POST",
       body: JSON.stringify(data),
     });
