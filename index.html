@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agenda tu cita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- BANNER -->
+    <img src="banner.png" class="banner" />
+
+    <form id="formCita">
+
+      <h2>Agenda tu cita</h2>
+
+      <input type="text" name="nombre" placeholder="Nombre completo" required />
+
+      <input type="tel" name="telefono" placeholder="Teléfono" required />
+
+      <input type="date" name="fecha" required />
+
+      <select name="servicio" required>
+        <option value="">Selecciona un servicio</option>
+        <option>Corte</option>
+        <option>Barba</option>
+        <option>Corte y barba</option>
+        <option>Despunté</option>
+        <option>Otro</option>
+      </select>
+
+      <!-- HORAS DINÁMICAS -->
+      <select name="hora" id="hora" required></select>
+
+      <textarea name="comentarios" placeholder="Notas (opcional)" maxlength="150"></textarea>
+
+      <button type="submit" id="btn">Agendar mi cita</button>
+
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
