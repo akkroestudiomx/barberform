@@ -7,7 +7,7 @@ form.addEventListener("submit", async (e) => {
   btn.disabled = true;
 
   try {
-    const res = await fetch("https://script.google.com/macros/s/AKfycbybwsxuPepJ3vETJGiHuenYyTvytozbcapvEh73qOPGXN9I6_lBhaDMesDsi1acXzb9/exec", {
+    const res = await fetch("https://script.google.com/macros/s/AKfycbwYrRqkISlmrpwMT1HK0CPhA-bHZp2taYIKwkzG7L-Q0TN1Rt99FeYsNbkRG6xf3O6s/exec", {
       method: "POST",
       body: JSON.stringify(data),
     });
