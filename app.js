@@ -1,5 +1,5 @@
 try {
-  const res = await fetch("TU_URL_SCRIPT", {
+  const res = await fetch("fetch("https://script.google.com/macros/s/AKfycbXXXXX/exec", {", {
     method: "POST",
     body: JSON.stringify(data),
   });
