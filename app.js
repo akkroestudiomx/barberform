@@ -50,7 +50,7 @@ form.addEventListener("submit", async (e) => {
     }
 
     // REDIRECCIÓN A IMAGEN DE CONFIRMACIÓN
-    window.location.href = "https://i.postimg.cc/255Sv672/Agendado-Jrs-Barber.png";
+   window.location.href = "confirmacion.html";
 
   } catch (error) {
     console.error("ERROR COMPLETO:", error);
