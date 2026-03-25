@@ -18,11 +18,25 @@
 
       <h2>Agenda tu cita</h2>
 
-      <input type="text" name="nombre" placeholder="Nombre completo" required />
+      <input 
+        type="text" 
+        name="nombre" 
+        placeholder="Nombre completo" 
+        required 
+      />
 
-      <input type="tel" name="telefono" placeholder="Teléfono" required />
+      <input 
+        type="tel" 
+        name="telefono" 
+        placeholder="Teléfono" 
+        required 
+      />
 
-      <input type="date" name="fecha" required />
+      <input 
+        type="date" 
+        name="fecha" 
+        required 
+      />
 
       <select name="servicio" required>
         <option value="">Selecciona un servicio</option>
@@ -33,14 +47,20 @@
         <option>Otro</option>
       </select>
 
-      <!-- HORAS -->
+      <!-- SELECT DE HORAS (CON FIX) -->
       <select name="hora" id="hora" required>
-  <option value="">Selecciona una hora</option>
-</select>
+        <option value="">Selecciona una hora</option>
+      </select>
 
-      <textarea name="comentarios" placeholder="Notas (opcional)" maxlength="150"></textarea>
+      <textarea 
+        name="comentarios" 
+        placeholder="Notas (opcional)" 
+        maxlength="150">
+      </textarea>
 
-      <button type="submit" id="btn">Agendar mi cita</button>
+      <button type="submit" id="btn">
+        Agendar mi cita
+      </button>
 
     </form>
   </div>
