@@ -30,7 +30,7 @@ form.addEventListener("submit", async (e) => {
   btn.disabled = true;
 
   try {
-    const res = await fetch("TU_URL_SCRIPT", {
+    const res = await fetch("https://script.google.com/macros/s/AKfycbzD8Qn9rgzGJQudzoGT9H_ukAays6xG72y7RwwDngXgLAwd3tBv7HgTkNHD34MqZoqk/exec", {
       method: "POST",
       body: JSON.stringify(data),
     });
